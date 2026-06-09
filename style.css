@@ -1,0 +1,360 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+  scroll-behavior: smooth; 
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f5f0e6; 
+  color: #333; 
+}
+
+/* Header and navigation bar */
+nav {
+  background: #4b2e2e; 
+  padding: 18px 5%; 
+  position: fixed; 
+  width: 100%;
+  top: 0;
+  z-index: 1000; 
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none; 
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+nav ul li {
+  margin-left: 25px; 
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 1.2;
+  display: block;
+  transition: 0.3s ease; 
+}
+
+nav ul li a:hover {
+  color: #d4a373; 
+}
+
+/* Menu button for mobile phones */
+.burger {
+  display: none;
+  font-size: 30px;        
+  cursor: pointer;
+  color: white;
+  line-height: 1;         
+}
+
+/* Welcome banner */
+#home {
+  height: 100vh; 
+  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url('https://img.magnific.com/free-vector/dark-coffee-background-with-hand-drawn-illustrations_354956-1023.jpg?semt=ais_hybrid&w=740&q=80');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.home-content h1 {
+  font-size: 60px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.home-content p {
+  font-size: 24px;
+  margin-bottom: 35px;
+}
+
+/*  Menu  */
+.btn {
+  background: #d4a373;
+  color: white;
+  padding: 12px 30px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background: #b07d52;
+}
+
+section {
+  padding: 100px 10%; 
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 36px;
+  color: #4b2e2e;
+}
+
+/* About Us */
+.about-content {
+  max-width: 800px; 
+  margin: 0 auto; 
+  text-align: center;
+  line-height: 1.8; 
+  font-size: 18px;
+}
+
+/* Menu items  */
+.menu-container {
+  display: grid;
+  /* Automatically wraps cards into rows based on screen size */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px; /* Space between cards */
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); 
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; 
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  margin-bottom: 8px;
+  color: #4b2e2e;
+  font-size: 20px;
+}
+
+.card p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #d4a373;
+}
+
+/* Services features section */
+#services {
+  background: #f5f0e6;
+}
+
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.service-box {
+  background: white;
+  padding: 35px 25px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+  transition: 0.3s ease;
+}
+
+.service-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}
+
+.icon {
+  font-size: 45px;
+  margin-bottom: 15px;
+}
+
+.service-box h3 {
+  color: #4b2e2e;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.service-box p {
+  color: #666;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* Contact  */
+.contact-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; 
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.contact-wrapper form {
+  flex: 1.5;               
+  min-width: 320px;
+}
+
+.contact-info {
+  flex: 1;                 
+  min-width: 280px;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;    
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); 
+  color: #4b2e2e;
+  font-size: 18px;        
+  line-height: 2.2; 
+}
+
+form input,
+form textarea {
+  margin-bottom: 20px;   
+  padding: 15px;
+  border: 1px solid #ccc; 
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none; 
+  background: white;
+  width: 100%;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #4b2e2e;
+}
+
+form textarea {
+  height: 150px;           
+  resize: none; 
+}
+
+form button {
+  background: #4b2e2e;
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer; 
+  font-size: 18px;
+  font-weight: bold;
+  transition: 0.3s;
+  margin-top: 5px;
+  width: 100%;
+}
+
+form button:hover {
+  background: #d4a373; 
+}
+
+.contact-info p {
+  margin: 0; 
+}
+
+.contact-info p strong {
+  color: #333;
+}
+
+/* Footer  */
+footer {
+  background: #4b2e2e;
+  color: white;
+  text-align: center;
+  padding: 25px;
+  font-size: 15px;
+}
+
+/* Responsive design layout for tablets */
+@media (max-width: 992px) {
+  .home-content h1 {
+    font-size: 48px;
+  }
+  section {
+    padding: 80px 5%; 
+  }
+}
+
+/* Responsive design layout for mobile phones */
+@media (max-width: 768px) {
+  .burger {
+    display: block; /* Shows hamburger menu  */
+  }
+
+  nav ul {
+    display: none; /* Hides menu links until button is clicked */       
+    flex-direction: column; 
+    align-items: center;
+    background: #4b2e2e;
+    position: absolute;
+    top: 65px; 
+    left: 0;
+    width: 100%;
+    padding: 10px 0; 
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Opens mobile menu drawer when JavaScript toggles 'active' class */
+  nav ul.active {
+    display: flex;        
+  }
+
+  nav ul li {
+    margin: 8px 0; 
+    margin-left: 0;    
+  }
+
+  nav ul li a {
+    font-size: 16px; 
+  }
+
+  .home-content h1 {
+    font-size: 38px;
+  }
+
+  .home-content p {
+    font-size: 18px;
+  }
+
+  h2 {
+    font-size: 30px;
+    margin-bottom: 35px;
+  }
+}
